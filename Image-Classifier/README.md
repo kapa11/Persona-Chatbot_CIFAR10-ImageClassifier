@@ -16,6 +16,7 @@ One of the most widely used benchmark datasets in machine learning and computer 
 - **Classes**: 10 categories (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck)
 - **Distribution**: 6,000 images per class
 - **Split**: 50,000 training images + 10,000 test images
+- **Augmentation used**: RandomHorizontalFlip(0.5) randomly flips images horizontally with a 50% probability.
 
 ## CNN Architecture: 
 
@@ -23,6 +24,13 @@ This TinyVGG implementation is a simplified CNN designed for CIFAR-10 classifica
 1. The first block takes the 32×32 RGB image and applies two convolution layers with 64 filters to detect edges and shapes. ReLU makes values non-negative, adding non-linearity. A MaxPool then halves the size to 16×16, keeping key features and discarding redundancy.
 2. The second block increases the number of feature maps from 64 to 128, allowing for the learning of more complex patterns. Using the same conv-ReLU-conv-ReLU-pool setup, it reduces the size to 8×8 while deepening the features for higher-level understanding.
 3. The classifier flattens the 8×8×128 maps into 8,192 values, then passes them through fully connected layers. Dropout randomly disables half the connections to avoid overfitting and improve generalization. A dense layer reduces features to 512, and the final layer outputs 10 class predictions for CIFAR-10.
+
+## About ResNet18 (The Pre-trained model):
+
+- Belongs to the ResNet (Residual Network) family, introduced to solve the vanishing gradient problem in very deep networks.
+- ResNet18 consists of 18 layers, including convolutional layers, batch normalization, ReLU activations, and fully connected layers, making it the smallest variant in the ResNet family.
+- ResNet18 pre-trained on ImageNet provides excellent feature representations that transfer well to other vision tasks, such as this one.
+- With only 11.2M parameters compared to larger ResNet variants, it offers an optimal balance between performance and computational requirements
 
 ## Loss function and Optimizer used: 
 
@@ -51,8 +59,85 @@ The evaluate_model function assesses model performance beyond overall accuracy. 
 
 ### Training CNN without augmentation:
 
-![Final Accuracy](Evaluations_Images/CNN_NoAug/FinalAccuracy.jpg)
 *Final accuracy and class-wise metrics*
+
+![Final Accuracy](Evaluations_Images/CNN_NoAug/FinalAccuracy.jpg)
+
+---
+
+*Confusion Matrix*
+
+![Confusion Matrix](Evaluations_Images/CNN_NoAug/ConfusionMatrix.jpg)
+
+---
+
+*(Training and Validation)(accuracy and loss) compared against number of epochs*
+
+![Plots](Evaluations_Images/CNN_NoAug/Accuracy_Loss_plot.jpg)
+
+---
+
+### Training CNN without augmentation:
+
+*Final accuracy and class-wise metrics*
+
+![Final Accuracy](Evaluations_Images/CNN_Aug/FinalAccuracy.jpg)
+
+---
+
+*Confusion Matrix*
+
+![Confusion Matrix](Evaluations_Images/CNN_Aug/ConfusionMatrix.jpg)
+
+---
+
+*(Training and Validation)(accuracy and loss) compared against number of epochs*
+
+![Plots](Evaluations_Images/CNN_Aug/Accuracy_Loss_plot.jpg)
+
+---
+
+### Fine-tuning ResNet18 without augmentation:
+
+*Final accuracy and class-wise metrics*
+
+![Final Accuracy](Evaluations_Images/ResNet18_NoAug/FinalAccuracy.jpg)
+
+---
+
+*Confusion Matrix*
+
+![Confusion Matrix](Evaluations_Images/ResNet18_NoAug/ConfusionMatrix.jpg)
+
+---
+
+*(Training and Validation)(accuracy and loss) compared against number of epochs*
+
+![Plots](Evaluations_Images/ResNet18_NoAug/Accuracy_Loss_plot.jpg)
+
+---
+
+### Fine-tuning ResNet18 without augmentation:
+
+*Final accuracy and class-wise metrics*
+
+![Final Accuracy](Evaluations_Images/ResNet18_Aug/FinalAccuracy.jpg)
+
+---
+
+*Confusion Matrix*
+
+![Confusion Matrix](Evaluations_Images/ResNet18_Aug/ConfusionMatrix.jpg)
+
+---
+
+*(Training and Validation)(accuracy and loss) compared against number of epochs*
+
+![Plots](Evaluations_Images/ResNet18_Aug/Accuracy_Loss_plot.jpg)
+
+
+
+
 
 
 
