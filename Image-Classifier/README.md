@@ -47,7 +47,12 @@ The evaluate_model function assesses model performance beyond overall accuracy. 
 - Confusion Matrices: Heatmaps using seaborn showing prediction accuracy for each of the 10 CIFAR-10 classes
 - Classification Reports: Text-based per-class precision, recall, and F1-score summaries
 
-## CNN without augmentation: 
+## Visual Metrics:
+
+### Training CNN without augmentation:
+
+![Final Accuracy](Evaluations_Images/CNN_NoAug/FinalAccuracy.jpg)
+*Final accuracy and class-wise metrics*
 
 
 
