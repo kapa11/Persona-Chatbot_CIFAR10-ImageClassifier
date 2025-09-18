@@ -2,6 +2,10 @@
 
 Interactive conversational AI system featuring 5 distinct personalities with shared memory and Streamlit-based web interface.
 
+![Interface Image](image.png)
+
+---
+
 ## TLDR
 This program implements an interactive persona-based chatbot system using HuggingFace's Inference API and Streamlit. It features 5 unique AI personalities (RoastBot, ShakespeareBot, EmojiBot, PhilosopherBot, and PirateBot) that maintain individual conversation histories while sharing context through a unified memory system. Each persona has specialized prompts and response styles, resulting in engaging, character-driven interactions. The application includes conversation management, message styling, user feedback collection, and a professional web interface for a seamless user experience.
 
