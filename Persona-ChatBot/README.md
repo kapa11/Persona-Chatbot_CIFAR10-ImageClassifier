@@ -78,21 +78,27 @@ Manages chat history storage, retrieval, and clearing functionality while mainta
 
 ## 🚀 Getting Started
 
+### Step 0: Check Python Installation
+Before starting, make sure Python 3.8 or later is installed on your system.
+1. You can do so by running the command ``` python --version ``` on your terminal
+2. If you see a version number (e.g., Python 3.10.12), you're good to go.
+3. If you see an error, or see an older Python version (3.8 or below), head to the official Python website: ```https://www.python.org/downloads/``` and download the latest version.
+
 ### Step 1: Clone the Repository
 First, download the project to your local machine by cloning the repository from GitHub:
 You may choose to copy this command into your terminal: 
-1. ``` git clone https://github.com/kapa11/persona-chatbot.git```
-2. ``` cd persona-chatbot```
+1. ``` git clone https://github.com/kapa11/persona-chatbot.git ```
+2. ``` cd persona-chatbot ```
 
 ### Step 2: Virtual environment(recommended)
 You can create a virtual environment to keep this project’s dependencies separate:
-1. Copy and paste the command: ``` python -m venv venv```
-2. If you're on Windows, to activate: ``` venv\Scripts\activate```
-3. If you're on Linux/Mac, to activate: ``` source venv/bin/activate```
+1. Copy and paste the command: ``` python -m venv venv ```
+2. If you're on Windows, to activate: ``` venv\Scripts\activate ```
+3. If you're on Linux/Mac, to activate: ``` source venv/bin/activate ```
 
 ### Step 3: Install Required Python Packages
 Before running the chatbot, make sure all the necessary Python packages are installed. The project uses Streamlit and Hugging Face Hub, which are not included in the standard Python library.
-Copy-paste and run the command:  ``` pip install streamlit huggingface_hub```
+Copy-paste and run the command:  ``` pip install streamlit huggingface_hub ```
 
 ### Step 4: Get your Hugging Face Token
 The chatbot uses Hugging Face’s models, which require an access token to authenticate
@@ -100,15 +106,15 @@ The chatbot uses Hugging Face’s models, which require an access token to authe
 2. Click on your profile picture → Settings → Access Tokens
 3. Click New token, give it a name (e.g., persona-chatbot-token), select “Read” access, and generate the token.
 4. Copy the token as you will need it to run the chatbot.
-5. If you're on Windows, set your token in(in the terminal): ``` set HF_TOKEN=your_token_here```
-6. If you're on Linux/Mac, set your token in(in the terminal): ``` export HF_TOKEN=your_token_here```
+5. If you're on Windows, set your token in(in the terminal): ``` set HF_TOKEN=your_token_here ```
+6. If you're on Linux/Mac, set your token in(in the terminal): ``` export HF_TOKEN=your_token_here ```
 
 ### Step 5: Finally!
 Now that the code, dependencies, and Hugging Face token are ready, you can launch the chatbot using Streamlit.
 Note: Make sure your virtual environment is activated and your Hugging Face token is set.
-Use the command: ``` streamlit run finalApp.py```
+Use the command: ``` streamlit run finalApp.py ```
 
-#🎉🔥✨ *Et voila* ✨🔥🎉
+#🎉🔥✨ *Et voilà* ✨🔥🎉
 
 
 
