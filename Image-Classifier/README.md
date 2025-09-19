@@ -49,6 +49,11 @@ An **epoch** is one complete pass of the entire training dataset through the mod
 
 The evaluate_model function assesses model performance beyond overall accuracy. In evaluation mode with gradients off, it first computes test accuracy across all batches while storing predictions and true labels for a confusion matrix. A second pass performs per-class analysis, showing strengths and weaknesses across the 10 CIFAR-10 categories, and returns labels and metrics for detailed visualization.
 
+## Hardware Used:
+
+- Graphics Card: NVIDIA GeForce RTX 4050 Laptop GPU
+- Fallback Option: Intel Core Ultra 7 CPU, if GPU memory errors occur
+
 ## Data Visualization:
 - Training & Validation Loss Curves: Line plots showing loss decrease over epochs for all 4 models
 - Training & Validation Accuracy Curves: Line plots tracking accuracy improvement over epochs
@@ -77,7 +82,7 @@ The evaluate_model function assesses model performance beyond overall accuracy. 
 
 ---
 
-### Training CNN without augmentation:
+### Training CNN with augmentation:
 
 *Final accuracy and class-wise metrics*
 
@@ -117,7 +122,7 @@ The evaluate_model function assesses model performance beyond overall accuracy. 
 
 ---
 
-### Fine-tuning ResNet18 without augmentation:
+### Fine-tuning ResNet18 with augmentation:
 
 *Final accuracy and class-wise metrics*
 
@@ -134,6 +139,16 @@ The evaluate_model function assesses model performance beyond overall accuracy. 
 *(Training and Validation)(accuracy and loss) compared against number of epochs*
 
 ![Plots](Evaluations_Images/ResNet18_Aug/Accuracy_Loss_plot.jpg)
+
+---
+
+## References:
+
+1. [Training a classifier using PyTorch](https://docs.pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html)
+2. [Transfer Learning for Computer Vision Tutorial](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#finetuning-the-convnet)
+3. [CIFAR10 with VGG and Resnet in PyTorch](https://www.kaggle.com/code/kannapat/cifar10-with-vgg-and-resnet-in-pytorch/notebook#Resnet-Model)
+4. [Training and Evaluating CIFAR10 Image Data with TinyVGG](https://onabajomonsurat.hashnode.dev/training-and-evaluating-cifar10-image-data-with-tinyvgg-model-architecture-built-with-pytorch)
+5. [Models and Pre-trained Weights](https://docs.pytorch.org/vision/stable/models.html)
 
 
 
