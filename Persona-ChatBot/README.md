@@ -7,7 +7,7 @@ Interactive conversational AI system featuring 5 distinct personalities with sha
 ---
 
 ## TLDR
-This program implements an interactive persona-based chatbot system using HuggingFace's Inference API and Streamlit. It features 5 unique AI personalities (RoastBot, ShakespeareBot, EmojiBot, PhilosopherBot, and PirateBot) that maintain individual conversation histories while sharing context through a unified memory system. Each persona has specialized prompts and response styles, resulting in engaging, character-driven interactions. The application includes conversation management, message styling, user feedback collection, and a professional web interface for a seamless user experience.
+This program implements an interactive persona-based chatbot system using HuggingFace's Inference API and Streamlit. It features 5 unique AI personalities (RoastBot, ShakespeareBot, EmojiBot, PhilosopherBot, and PirateBot) that maintain individual conversation histories while sharing context through a unified memory system. Each persona has specialized prompts and response styles, resulting in engaging, character-driven interactions. The application features conversation management, message styling, user feedback collection, and a professional web interface, providing a seamless user experience.
 
 ---
 
@@ -114,7 +114,18 @@ Now that the code, dependencies, and Hugging Face token are ready, you can launc
 Note: Make sure your virtual environment is activated and your Hugging Face token is set.
 Use the command: ``` streamlit run finalApp.py ```
 
-#🎉🔥✨ *Et voilà* ✨🔥🎉
+### 🎉🔥✨ *Et voilà* ✨🔥🎉
+
+### Step 6: Stopping the session: 
+When you’re done chatting with the bot, you have a couple of options:
+1. **End the conversation only**:
+   - Type "quit" in the text box.
+   - This will stop the current chat session.
+   - To start fresh, refresh the browser page, and a new session will begin.
+3. **Completely close the chatbot program**:
+   - Go to the terminal where you ran: ``` streamlit run finalApp.py ```
+   - Make sure your virtual environment is still active.
+   - Enter ``` Ctrl + C ``` on the terminal and follow the instructions.
 
 
 
